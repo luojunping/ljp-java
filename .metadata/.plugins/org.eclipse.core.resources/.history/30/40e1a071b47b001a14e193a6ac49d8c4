@@ -1,0 +1,19 @@
+package com.ljp.test.thread;
+
+import java.util.concurrent.TimeUnit;
+
+public class ThreadAliveTest {
+
+	public static void main(String[] args) {
+		Thread thread = new Thread(() -> {
+			try {
+				TimeUnit.SECONDS.sleep(5);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		});
+		thread.start();
+		System.out.println(thread.isAlive());
+	}
+
+}

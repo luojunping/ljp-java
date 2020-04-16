@@ -1,0 +1,18 @@
+package com.ljp.test.thread;
+
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ReentrantLockTest {
+
+	ReentrantLock reentrantLock = new ReentrantLock();
+
+	public static void main(String[] args) {
+		ReentrantLockTest r1 = new ReentrantLockTest();
+		ReentrantLockTest r2 = new ReentrantLockTest();
+		System.out.println(r1.reentrantLock == r2.reentrantLock);
+		System.out.println(r1.reentrantLock);
+		System.out.println(r2.reentrantLock);
+		System.out.println(null == null);
+	}
+
+}

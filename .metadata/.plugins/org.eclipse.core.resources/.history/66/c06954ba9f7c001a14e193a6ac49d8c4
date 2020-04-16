@@ -1,0 +1,37 @@
+package com.ljp.test.thread;
+
+public class FinalTest {
+
+	int i;
+	final int j;
+	static FinalTest obj;
+
+	public FinalTest() {
+		i = 1;
+		j = 2;
+	}
+
+	public static void writer() {
+		obj = new FinalTest();
+	}
+
+	public static void reader() {
+		FinalTest object = obj;
+		int a = object.i;
+		int b = object.j;
+		System.out.println(a);
+		System.out.println(b);
+	}
+
+	public static void main(String[] args) {
+		new Thread(() -> {
+			FinalTest.writer();
+		}).start();
+		;
+		new Thread(() -> {
+			FinalTest.reader();
+		}).start();
+		;
+	}
+
+}
