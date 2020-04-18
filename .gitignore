@@ -27,7 +27,10 @@ hs_err_pid*
 .metadata/
 .metadata/*
 .project
+*/.project
 */.settings
 */.settings/
 */.settings/*
+*/target
+*/target/
 */target/*
