@@ -28,6 +28,8 @@ hs_err_pid*
 .metadata/*
 .project
 */.project
+.classpath
+*/.classpath
 */.settings
 */.settings/
 */.settings/*
